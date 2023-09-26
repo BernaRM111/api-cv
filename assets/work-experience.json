@@ -1,0 +1,28 @@
+[
+    {
+      "puesto": "Desarrollador Front-end",
+      "empresa": "ABC Company",
+      "fecha_ini": "2018-01-15",
+      "fecha_fin": "2020-06-30",
+      "ciudad": "Ciudad de México",
+      "pais": "México",
+      "logros": [
+        {"descripcion": "Desarrollé aplicaciones web interactivas."},
+        {"descripcion": "Colaboré en proyectos de equipo."},
+        {"descripcion": "Optimicé el rendimiento de sitios web."}
+      ]
+    },
+    {
+      "puesto": "Diseñador UI/UX",
+      "empresa": "XYZ Design Studio",
+      "fecha_ini": "2021-05-01",
+      "fecha_fin": "Actualmente",
+      "ciudad": "Guadalajara",
+      "pais": "México",
+      "logros": [
+        {"descripcion": "Diseñé interfaces de usuario atractivas."},
+        {"descripcion": "Realicé pruebas de usabilidad."},
+        {"descripcion": "Contribuí al diseño de productos exitosos."}
+      ]
+    }
+]

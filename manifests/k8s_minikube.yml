@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {model_name}-deployment
+  name: nodeapi-deployment
 spec:
   selector:
     matchLabels:
-      app: {model_name}-server
+      app: nodeapi-server
   replicas: 1
   template:
     metadata:
       labels:
-        app: {model_name}-server
+        app: nodeapi-server
     spec:
       containers:
-      - name: {model_name}-container
+      - name: nodeapi-container
         #image: gcr.io/tensorflow-serving/resnet 
-        image: docker.io/{docker_user}/{model_name}:{github.sha}
-        imagePullPolicy: Always
+        image: docker.io/bernardorm/nodeapi:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8080
 ---
@@ -25,12 +25,12 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    run: {model_name}-service
-  name: {model_name}-service
+    run: nodeapi-service
+  name: nodeapi-service
 spec:
   ports:
   - port: 8080
     targetPort: 8080
   selector:
-    app: {model_name}-server
+    app: nodeapi-server
   type: LoadBalancer

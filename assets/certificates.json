@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Certificado de Desarrollo Web Avanzado",
+        "anio": "2021",
+        "descripcion": "Obtenido por completar un curso avanzado de desarrollo web."
+    },
+    {
+        "nombre": "Certificado de Gestión de Proyectos",
+        "anio": "2022",
+        "descripcion": "Reconocimiento por liderar con éxito un proyecto de alto impacto."
+    },
+    {
+        "nombre": "Certificado de Diseño de Interfaz de Usuario",
+        "anio": "2023",
+        "descripcion": "Certificación en diseño de interfaces de usuario modernas y atractivas."
+    }
+]
+
