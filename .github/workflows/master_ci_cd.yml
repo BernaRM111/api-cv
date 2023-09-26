@@ -1,4 +1,4 @@
-name: master CI, CD workflow 
+name: main CI, CD workflow 
 on: 
   push:
     branches: [ "master"]
@@ -9,21 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 16.x
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
-      - name: make .env 
-        uses: SpicyPizza/create-envfile@v1.3
-        with:
-          envkey_DEV_DATABASE_URL : ${{ secrets.DEV_DATABASE_URL }}
-          file_name: .env
-          fail_on_empty: false
-      
-      - name: show dir, .env file
-        run: |
-          cat .env 
-          
+          node-version: 18.x
+
       - name: Build the custom Docker image
         run: docker build -t ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}} .
 
@@ -58,7 +48,8 @@ jobs:
       - uses: okteto/context@2.7.0
         with:
           token: ${{secrets.OKTETO_TOKEN }}
-
+##
+##
       - name: Deploy and Wait
         uses: okteto/actions/deploy@v1
         env:
